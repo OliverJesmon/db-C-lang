@@ -9,6 +9,8 @@ struct index
 };
 int main()
 {
+	FILE *fp;
+	fp=fopen("data.txt","a+");
     struct index in[50];
     int i,n,j;
     int choice;
@@ -39,13 +41,20 @@ int main()
         }
     }
     system("clear");
+    //fprintf(fp,"  Name\t\t\tAge   Gender");
     printf("  Name\t\t\tAge   Gender");
     for(i=0; i<n; i++)
     {
+
+	    fprintf(fp,"\n%d.%s\t",i+1,in[i].alias);
         printf("\n%d.%s\t",i+1,in[i].alias);
+	fprintf(fp,"\t");
         printf("\t");
+	fprintf(fp,"%d",in[i].age);
         printf("%d",in[i].age);
+	fprintf(fp,"    %c",in[i].gen);
         printf("    %c",in[i].gen);
     }
+    fclose(fp);
     return 0;//Signing out Jesmon
 }
