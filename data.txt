@@ -1,1 +1,1 @@
-Name              Age     Gender
+Name            Age Gender
