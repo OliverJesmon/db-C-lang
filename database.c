@@ -41,7 +41,6 @@ int main()
         }
     }
     system("clear");
-    //fprintf(fp,"  Name\t\t\tAge   Gender");
     printf("  Name\t\t\tAge   Gender");
     for(i=0; i<n; i++)
     {
